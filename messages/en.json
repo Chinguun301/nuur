@@ -11,7 +11,7 @@
   },
   "Footer": {
     "portfolio": "Portfolio",
-    "description": "A passionate Front-End Developer crafting beautiful, performant, and accessible web experiences.",
+    "description": "Front-End developer skilled in Flutter, Vue.js, and Next.js. CS graduate from Shanghai, fluent in 3 languages.",
     "pages": "Pages",
     "connect": "Connect",
     "home": "Home",
@@ -25,14 +25,14 @@
   },
   "HeroSection": {
     "greeting": "Hello, I'm",
-    "name": "John Doe",
+    "name": "Chinguun Vanchinsuren",
     "roles": [
       "Front-End Developer",
-      "UI/UX Designer",
-      "React Specialist",
-      "Open Source Contributor"
+      "Flutter & Vue.js Developer",
+      "Next.js Enthusiast",
+      "CS Graduate"
     ],
-    "description": "I build beautiful, performant, and accessible web applications with modern technologies. Let's create something amazing together.",
+    "description": "Front-End developer with experience in Flutter, Vue.js, and Next.js. Studied Computer Science in Shanghai, fluent in 3 languages. Let's build something great together.",
     "viewMyWork": "View My Work",
     "downloadCV": "Download CV"
   },
@@ -52,9 +52,9 @@
   },
   "StatsSection": {
     "projects": "Projects",
-    "githubStars": "GitHub Stars",
-    "contributions": "Contributions",
-    "clients": "Clients"
+    "languages": "Languages",
+    "experience": "Experience",
+    "medals": "Medals"
   },
   "TestimonialsSection": {
     "title": "What People Say",
@@ -90,10 +90,10 @@
   "AboutPage": {
     "title": "About",
     "titleAccent": "Me",
-    "description": "I'm a passionate Front-End Developer with 5+ years of experience building modern web applications. I specialize in React, Next.js, and creating delightful user experiences.",
-    "description2": "My journey in tech started during college when I built my first website. Since then, I've been obsessed with crafting beautiful, performant, and accessible web applications that make a real impact.",
-    "location": "San Francisco, CA",
-    "experience": "5+ Years Experience",
+    "description": "I'm a Front-End developer with a Computer Science degree from Shanghai University of Science and Technology. I specialize in Flutter, Vue.js, and Next.js, building cross-platform mobile apps and modern web applications.",
+    "description2": "My journey in tech started at university in Shanghai where I discovered my passion for programming. Since then, I've built mobile apps with Flutter, web platforms with Vue.js, and continue to grow my skills in modern web development.",
+    "location": "Bayanzurkh District, Ulaanbaatar, Mongolia",
+    "experience": "1+ Year Experience",
     "downloadResume": "Download Resume",
     "journeyTitle": "My Journey",
     "journeyDescription": "The path that shaped my career."
@@ -119,8 +119,8 @@
     "mn": "Монгол"
   },
   "Common": {
-    "siteTitle": "Front-End Developer Portfolio",
-    "siteDescription": "A passionate Front-End Developer crafting beautiful, performant, and accessible web experiences.",
-    "siteName": "Portfolio"
+    "siteTitle": "Chinguun Vanchinsuren - Portfolio",
+    "siteDescription": "Front-End Developer | Flutter, Vue.js & Next.js | Computer Science Graduate",
+    "siteName": "Chinguun Vanchinsuren"
   }
 }

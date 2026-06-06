@@ -11,69 +11,74 @@ import { Link } from "@/i18n/navigation";
 
 const allProjects = [
   {
-    title: "E-Commerce Platform",
+    title: "E-Clinic Mobile App (iOS)",
     description:
-      "Full-featured e-commerce platform with real-time inventory and payment processing.",
-    slug: "ecommerce-platform",
-    category: "Full Stack",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+      "iOS healthcare application built with Flutter. Features multi-role access, appointment management, and doctor-patient communication.",
+    slug: "eclinic-ios",
+    category: "Mobile",
+    technologies: ["Flutter", "Dart", "iOS", "REST APIs"],
     image: null,
     github: "#",
     demo: "#",
   },
   {
-    title: "AI Chat Application",
-    description: "Real-time chat with AI-powered responses and image generation.",
-    slug: "ai-chat-app",
-    category: "AI",
-    technologies: ["React", "OpenAI", "WebSocket", "Redis"],
+    title: "E-Clinic Mobile App (Android)",
+    description:
+      "Android version of the healthcare app with the same feature set. Cross-platform code sharing with Flutter.",
+    slug: "eclinic-android",
+    category: "Mobile",
+    technologies: ["Flutter", "Dart", "Android", "Firebase"],
     image: null,
     github: "#",
     demo: "#",
   },
   {
-    title: "Design System Library",
-    description: "50+ accessible, themeable UI components with documentation.",
-    slug: "design-system",
-    category: "Library",
-    technologies: ["React", "Storybook", "CSS Variables", "TypeScript"],
+    title: "E-Clinic Web Dashboard",
+    description:
+      "Admin dashboard built with Vue.js for managing patients, doctors, and appointments. Role-based access control.",
+    slug: "eclinic-dashboard",
+    category: "Web",
+    technologies: ["Vue.js", "JavaScript", "Vuex", "Tailwind CSS"],
     image: null,
     github: "#",
     demo: "#",
   },
   {
-    title: "Analytics Dashboard",
-    description: "Real-time analytics dashboard with interactive charts and reports.",
-    slug: "analytics-dashboard",
-    category: "Full Stack",
-    technologies: ["Next.js", "D3.js", "Supabase", "TypeScript"],
-    image: null,
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Task Management App",
-    description: "Collaborative project management tool with Kanban boards.",
-    slug: "task-management",
-    category: "Full Stack",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-    image: null,
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Portfolio Website",
-    description: "Personal portfolio with dynamic content management.",
+    title: "Personal Portfolio Website",
+    description:
+      "Modern bilingual portfolio with Next.js 16, Framer Motion animations, and dark/light mode.",
     slug: "portfolio-website",
-    category: "Frontend",
-    technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
+    category: "Web",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    image: null,
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Basketball Tournament App",
+    description:
+      "A tournament management and score tracking app concept built as a personal project.",
+    slug: "basketball-tournament",
+    category: "Mobile",
+    technologies: ["Flutter", "Dart", "Firebase"],
+    image: null,
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Language Learning Helper",
+    description:
+      "A tool to help with Chinese-English-Mongolian vocabulary learning and translation practice.",
+    slug: "language-helper",
+    category: "Web",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: null,
     github: "#",
     demo: "#",
   },
 ];
 
-const categories = ["All", "Full Stack", "Frontend", "AI", "Library"];
+const categories = ["All", "Mobile", "Web"];
 
 export default function ProjectsPage() {
   const t = useTranslations("ProjectsPage");

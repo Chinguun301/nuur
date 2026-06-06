@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "portfolio",
       "web development",
     ],
-    authors: [{ name: "John Doe" }],
+    authors: [{ name: "Chinguun Vanchinsuren" }],
     openGraph: {
       title: t("siteTitle"),
       description: t("siteDescription"),

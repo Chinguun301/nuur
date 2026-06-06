@@ -15,10 +15,10 @@ export function Footer() {
       { href: "/contact" as const, label: t("contact") },
     ],
     social: [
-      { href: "#", icon: GitBranch, label: "GitHub" },
+      { href: "https://github.com/chinguunv", icon: GitBranch, label: "GitHub" },
       { href: "#", icon: MessageCircle, label: "X (Twitter)" },
       { href: "#", icon: BriefcaseBusiness, label: "LinkedIn" },
-      { href: "#", icon: Mail, label: "Email" },
+      { href: "mailto:chinguunv@gmail.com", icon: Mail, label: "Email" },
     ],
   };
 

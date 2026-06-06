@@ -6,27 +6,27 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Jane Smith",
-    position: "CTO",
-    company: "Tech Corp",
+    name: "Team Lead",
+    position: "Front-End Team",
+    company: "E Clinic LLC",
     feedback:
-      "An exceptional developer with a keen eye for design. Delivered our project ahead of schedule with outstanding quality.",
+      "Delivered two complex mobile apps and a web dashboard with great attention to detail. Reliable and always meets deadlines.",
     rating: 5,
   },
   {
-    name: "Mike Johnson",
-    position: "Product Manager",
-    company: "Digital Agency",
+    name: "Classmate",
+    position: "CS Department",
+    company: "Shanghai University of Science and Technology",
     feedback:
-      "One of the best front-end developers I've worked with. His attention to detail and problem-solving skills are remarkable.",
+      "A dedicated and hardworking team player. His ability to communicate in three languages made collaboration smooth and effective.",
     rating: 5,
   },
   {
-    name: "Sarah Williams",
-    position: "Founder",
-    company: "Startup Inc.",
+    name: "Teammate",
+    position: "Basketball Team",
+    company: "Shanghai Mongolian Student Union",
     feedback:
-      "Transformed our outdated interface into a modern, fast, and user-friendly experience. Highly recommended!",
+      "Disciplined, adaptable, and always gives 100%. These qualities shine both in sports and in professional work.",
     rating: 5,
   },
 ];

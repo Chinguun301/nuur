@@ -8,55 +8,58 @@ import { Badge } from "@/components/ui/badge";
 
 const timeline = [
   {
-    year: "2024",
-    title: "Senior Front-End Developer",
-    company: "Tech Corp",
+    year: "2025",
+    title: "Front-End Developer (Flutter)",
+    company: "E Clinic LLC",
     type: "work",
     description:
-      "Leading front-end architecture, implementing design systems, and mentoring team members.",
+      "Built two mobile apps (iOS & Android) using Flutter and a web dashboard with Vue.js. System featured Admin, Sub Admin, Client, and Doctor roles.",
   },
   {
     year: "2023",
-    title: "Front-End Developer",
-    company: "Digital Agency",
+    title: "Internship",
+    company: "Shanghai Qike Information Technology Co., Ltd.",
     type: "work",
-    description: "Built responsive web applications and led the migration to Next.js.",
-  },
-  {
-    year: "2022",
-    title: "M.Sc. Computer Science",
-    company: "University of Technology",
-    type: "education",
-    description: "Specialized in Human-Computer Interaction and Web Technologies.",
-  },
-  {
-    year: "2021",
-    title: "AWS Certified Developer",
-    company: "Amazon Web Services",
-    type: "certification",
-    description: "Associate level certification for cloud development.",
+    description:
+      "Gained hands-on experience in daily operations, document processing, and information aggregation. Developed teamwork and professional skills.",
   },
   {
     year: "2020",
-    title: "Junior Developer",
-    company: "Startup Inc.",
-    type: "work",
-    description: "Started career building web applications with modern frameworks.",
+    title: "B.Sc. Computer Science",
+    company: "Shanghai University of Science and Technology",
+    type: "education",
+    description:
+      "Bachelor's degree in Computer Science with a 3.3 GPA. Specialized in software engineering in Shanghai, China.",
   },
   {
     year: "2019",
-    title: "B.Sc. Computer Science",
-    company: "University of Technology",
+    title: "International Program",
+    company: "East China University of Science and Technology",
     type: "education",
-    description: "Graduated with honors. Focused on software engineering and web development.",
+    description: "Specialized program in Shanghai, China. Achieved top grades (GPA: A).",
+  },
+  {
+    year: "2018",
+    title: "Chinese Language Program",
+    company: "University of Political Science and Law, Shanghai",
+    type: "education",
+    description: "Intensive Chinese language preparation program. Achieved top grades (GPA: A).",
+  },
+  {
+    year: "2007",
+    title: "Secondary Education (Math Focus)",
+    company: "Leading Laboratory 1st School, Mongolia",
+    type: "education",
+    description:
+      "Advanced mathematics program at Mongolia's top secondary school. Active in sports and olympiads.",
   },
 ];
 
 const achievements = [
-  { icon: Award, label: "Best Developer Award", value: "2024" },
-  { icon: Award, label: "Outstanding Project", value: "2023" },
-  { icon: Award, label: "Open Source Contributor", value: "2022" },
-  { icon: Award, label: "Hackathon Winner", value: "2021" },
+  { icon: Award, label: "Basketball Gold Medal", value: "2024" },
+  { icon: Award, label: "HSK Level 5", value: "Chinese" },
+  { icon: Award, label: "Math Olympiad Silver", value: "2015" },
+  { icon: Award, label: "Basketball Champion", value: "2016-18" },
 ];
 
 export default function AboutPage() {
@@ -110,7 +113,7 @@ export default function AboutPage() {
             >
               <div className="relative">
                 <div className="w-full aspect-square rounded-3xl bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                  <div className="text-8xl font-bold text-foreground/10">JD</div>
+                  <div className="text-8xl font-bold text-foreground/10">Ч</div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl -z-10 blur-2xl opacity-50" />
               </div>

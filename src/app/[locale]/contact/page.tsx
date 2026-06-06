@@ -74,19 +74,19 @@ export default function ContactPage() {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "hello@example.com",
-                  href: "mailto:hello@example.com",
+                  value: "chinguunv@gmail.com",
+                  href: "mailto:chinguunv@gmail.com",
                 },
                 {
                   icon: Phone,
                   label: "Phone",
-                  value: "+1 (555) 123-4567",
-                  href: "tel:+15551234567",
+                  value: "+976 95247512",
+                  href: "tel:+97695247512",
                 },
                 {
                   icon: MapPin,
                   label: "Location",
-                  value: "San Francisco, CA",
+                  value: "Bayanzurkh, Ulaanbaatar",
                   href: null,
                 },
               ].map((item) => (
@@ -115,7 +115,7 @@ export default function ContactPage() {
             <div className="h-48 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-border flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
-                <p className="text-sm text-muted-foreground">San Francisco Bay Area</p>
+                <p className="text-sm text-muted-foreground">Ulaanbaatar, Mongolia</p>
               </div>
             </div>
           </motion.div>

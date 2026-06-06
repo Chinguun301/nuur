@@ -17,54 +17,54 @@ import { Link } from "@/i18n/navigation";
 
 // This would come from Supabase in production
 const projectData = {
-  title: "E-Commerce Platform",
-  slug: "ecommerce-platform",
+  title: "E-Clinic Mobile App",
+  slug: "eclinic-mobile",
   description:
-    "A full-featured e-commerce platform with real-time inventory, payment processing, and admin dashboard.",
+    "Cross-platform healthcare mobile application built with Flutter for iOS and Android. Features multi-role access for Admins, Doctors, and Patients.",
   content: `## Overview
-A comprehensive e-commerce solution built with modern web technologies. The platform supports multiple vendors, real-time inventory management, and seamless payment processing.
+A comprehensive healthcare mobile application built with Flutter, serving patients, doctors, and administrators. The app features appointment management, communication tools, and role-based access control.
 
 ## Problem Statement
-Traditional e-commerce platforms are often slow, bloated, and provide poor user experiences. Our goal was to build a lightning-fast, intuitive shopping experience that converts visitors into customers.
+Healthcare facilities needed a modern digital solution to streamline patient management, appointment scheduling, and doctor-patient communication. The existing system was outdated and inefficient.
 
-## Business Goals
-- Increase conversion rate by 30%
-- Reduce page load time to under 2 seconds
-- Support 10,000+ concurrent users
-- Achieve 99.9% uptime
+## Project Goals
+- Build cross-platform apps for iOS and Android
+- Implement multi-role access (Admin, Sub Admin, Client, Doctor)
+- Create an admin web dashboard with Vue.js
+- Ensure data security and privacy compliance
 
 ## Technical Architecture
-The application follows a microservices architecture with Next.js on the frontend, Node.js microservices, and PostgreSQL for data persistence.
+Flutter for cross-platform mobile development, Vue.js for the web dashboard, and REST APIs for backend communication. State management handled by Vuex on the web side.
 
 ## Results
-- 45% increase in conversion rate
-- 1.2s average page load time
-- 99.95% uptime achieved`,
-  technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Redis", "Docker"],
-  category: "Full Stack",
+- Successfully delivered two mobile apps and a web dashboard
+- Multi-role system with granular permissions
+- Streamlined patient-doctor communication`,
+  technologies: ["Flutter", "Dart", "Vue.js", "JavaScript", "REST APIs"],
+  category: "Mobile",
   github: "#",
   demo: "#",
-  date: "2024",
+  date: "2025-2026",
   metrics: {
-    "Conversion Rate": "+45%",
-    "Page Load": "1.2s",
-    Uptime: "99.95%",
-    "Users Supported": "10K+",
+    Platforms: "iOS & Android",
+    "User Roles": "4",
+    Tech: "Flutter + Vue.js",
+    Duration: "1 Year",
   },
   challenges: [
-    "Scaling real-time inventory across multiple vendors",
-    "Handling payment processing with 100% accuracy",
-    "Optimizing database queries for sub-second response times",
+    "Building for both iOS and Android with a single codebase",
+    "Implementing complex multi-role access control system",
+    "Integrating with existing backend APIs",
   ],
   solutions: [
-    "Implemented Redis caching layer for real-time updates",
-    "Integrated Stripe with idempotency keys for reliable payments",
-    "Used PostgreSQL with connection pooling and query optimization",
+    "Used Flutter for true cross-platform development",
+    "Designed a scalable role-based permission system",
+    "Developed REST API integration layer with error handling",
   ],
   lessons: [
-    "Caching strategy is critical for real-time features",
-    "Comprehensive testing prevents payment issues",
-    "Database indexing has dramatic impact on performance",
+    "Flutter is excellent for cross-platform production apps",
+    "Well-defined user roles simplify complex features",
+    "Testing on real devices is essential for mobile apps",
   ],
 };
 

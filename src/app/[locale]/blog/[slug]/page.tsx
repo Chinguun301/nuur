@@ -52,8 +52,8 @@ Performance optimization is an ongoing process. By implementing these strategies
   category: "React",
   tags: ["React", "Performance", "Optimization"],
   author: {
-    name: "John Doe",
-    avatar: "JD",
+    name: "Chinguun Vanchinsuren",
+    avatar: "Ч",
   },
 };
 

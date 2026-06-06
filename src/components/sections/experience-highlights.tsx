@@ -6,28 +6,28 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Senior Front-End Developer",
-    company: "Tech Corp",
-    period: "2024 - Present",
+    title: "Front-End Developer (Flutter)",
+    company: "E Clinic LLC",
+    period: "Mar 2025 - May 2026",
     description:
-      "Lead front-end architecture and development of the main product. Implemented design system, improved performance by 40%, and mentored junior developers.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      "Built two mobile apps (iOS & Android) using Flutter and a web dashboard with Vue.js. Implemented multi-role system with Admin, Sub Admin, Client, and Doctor access levels.",
+    technologies: ["Flutter", "Dart", "Vue.js", "JavaScript"],
   },
   {
-    title: "Front-End Developer",
-    company: "Digital Agency",
-    period: "2022 - 2024",
+    title: "Intern",
+    company: "Shanghai Qike Information Technology Co., Ltd.",
+    period: "2023 - 2024",
     description:
-      "Built and maintained multiple client websites and applications. Specialized in React ecosystem and responsive design.",
-    technologies: ["React", "JavaScript", "SCSS", "Firebase"],
+      "Participated in daily operations, document processing and information aggregation. Developed teamwork skills and gained professional experience in a tech environment.",
+    technologies: ["Office Suite", "Document Processing", "Data Entry"],
   },
   {
-    title: "Junior Developer",
-    company: "Startup Inc.",
-    period: "2020 - 2022",
+    title: "B.Sc. Computer Science",
+    company: "Shanghai University of Science and Technology",
+    period: "2020 - 2024",
     description:
-      "Started career building web applications. Gained expertise in modern frontend technologies and best practices.",
-    technologies: ["JavaScript", "HTML/CSS", "Vue.js", "Node.js"],
+      "Earned a Bachelor's degree in Computer Science with a 3.3 GPA. Studied in Shanghai, China with coursework in software engineering, algorithms, and web development.",
+    technologies: ["Computer Science", "Algorithms", "Python", "Java"],
   },
 ];
 

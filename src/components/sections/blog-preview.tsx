@@ -9,34 +9,34 @@ import { Link } from "@/i18n/navigation";
 
 const posts = [
   {
-    title: "Building Performant React Applications",
+    title: "Building Cross-Platform Apps with Flutter",
     description:
-      "Learn the best practices for building high-performance React applications with modern techniques.",
+      "My experience building two production mobile apps for iOS and Android using Flutter. Lessons learned and best practices.",
     date: "Jan 15, 2025",
     readTime: "5 min read",
-    category: "React",
-    slug: "building-performant-react-apps",
-    tags: ["React", "Performance"],
+    category: "Flutter",
+    slug: "building-flutter-apps",
+    tags: ["Flutter", "Mobile", "Dart"],
   },
   {
-    title: "The Future of CSS: What's New in 2025",
+    title: "Studying Computer Science in Shanghai",
     description:
-      "Explore the latest CSS features and how they're changing the way we style web applications.",
+      "My journey from Mongolia to Shanghai University of Science and Technology. Life lessons from studying abroad.",
     date: "Dec 20, 2024",
     readTime: "4 min read",
-    category: "CSS",
-    slug: "future-of-css-2025",
-    tags: ["CSS", "Web Development"],
+    category: "Life",
+    slug: "studying-in-shanghai",
+    tags: ["Study Abroad", "China", "CS"],
   },
   {
-    title: "Mastering TypeScript: Advanced Patterns",
+    title: "Building a Bilingual Portfolio with Next.js",
     description:
-      "Deep dive into advanced TypeScript patterns and techniques for production applications.",
+      "How I built this portfolio with full English and Mongolian support using Next.js 16 and next-intl.",
     date: "Dec 5, 2024",
     readTime: "7 min read",
-    category: "TypeScript",
-    slug: "mastering-typescript-patterns",
-    tags: ["TypeScript", "Patterns"],
+    category: "Next.js",
+    slug: "bilingual-portfolio-nextjs",
+    tags: ["Next.js", "i18n", "TypeScript"],
   },
 ];
 

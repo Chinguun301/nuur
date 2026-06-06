@@ -8,6 +8,7 @@ import { Command, Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { createClient } from "@/lib/supabase/client";
+import { checkAdminRole } from "@/lib/actions/auth";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -32,21 +33,46 @@ export default function AdminLoginPage() {
       if (authError) throw authError;
 
       if (data.user) {
-        // Check if admin
-        const { data: userData } = await supabase
-          .from("users")
-          .select("role")
-          .eq("id", data.user.id)
-          .single();
+        // Check if admin using service_role key (bypasses RLS)
+        const { role, error: roleError } = await checkAdminRole(data.user.id);
 
-        if (userData?.role === "admin") {
+        if (role === "admin") {
           router.push("/admin/dashboard");
         } else {
           await supabase.auth.signOut();
-          setError("You don't have admin access.");
+          if (roleError) {
+            setError(
+              "Админ эрх шалгахад алдаа гарлаа.\n" +
+                "Алдаа: " +
+                roleError +
+                "\n\n" +
+                "ШИЙДЭЛ:\n" +
+                "1. Supabase Dashboard → SQL Editor-оор SQL ажиллуул:\n" +
+                "   CREATE OR REPLACE FUNCTION public.is_admin()\n" +
+                "   RETURNS BOOLEAN AS \$\$\n" +
+                "     SELECT EXISTS (\n" +
+                "       SELECT 1 FROM public.users WHERE id = auth.uid() AND role = 'admin'\n" +
+                "     );\n" +
+                "   \$\$ LANGUAGE sql SECURITY DEFINER STABLE;\n" +
+                "\n" +
+                '   DROP POLICY IF EXISTS "Admin all users" ON users;\n' +
+                '   CREATE POLICY "Admin all users" ON users\n' +
+                "   FOR ALL USING (public.is_admin());\n" +
+                "\n" +
+                "2. Дээрх SQL-ийг БҮХ бусад хүснэгтийн админ policy-д мөн адил хийх\n" +
+                "   (projects, blogs, skills, гэх мэт).",
+            );
+          } else {
+            setError(
+              "Танд admin эрх байхгүй байна.\n" +
+                "public.users хүснэгтэд таны role-г шалгана уу:\n" +
+                "  SELECT * FROM users WHERE email = 'admin@nuur.dev';",
+            );
+          }
         }
       }
     } catch (err) {
+      console.error("Login error:", err);
       setError(err instanceof Error ? err.message : "Invalid email or password");
     } finally {
       setLoading(false);

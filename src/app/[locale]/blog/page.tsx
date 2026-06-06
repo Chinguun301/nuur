@@ -10,62 +10,66 @@ import { Link } from "@/i18n/navigation";
 
 const blogPosts = [
   {
-    title: "Building Performant React Applications",
-    description: "Learn the best practices for building high-performance React applications.",
+    title: "Building Cross-Platform Apps with Flutter",
+    description:
+      "My experience building two production mobile apps for iOS and Android using Flutter.",
     date: "Jan 15, 2025",
     readTime: "5 min read",
-    category: "React",
-    slug: "building-performant-react-apps",
-    tags: ["React", "Performance", "Optimization"],
+    category: "Flutter",
+    slug: "building-flutter-apps",
+    tags: ["Flutter", "Mobile", "Dart"],
   },
   {
-    title: "The Future of CSS: What's New in 2025",
-    description: "Explore the latest CSS features that are changing web styling.",
+    title: "Studying Computer Science in Shanghai",
+    description: "My journey from Mongolia to Shanghai University of Science and Technology.",
     date: "Dec 20, 2024",
     readTime: "4 min read",
-    category: "CSS",
-    slug: "future-of-css-2025",
-    tags: ["CSS", "Web Development", "Design"],
+    category: "Life",
+    slug: "studying-in-shanghai",
+    tags: ["Study Abroad", "China", "CS"],
   },
   {
-    title: "Mastering TypeScript: Advanced Patterns",
-    description: "Deep dive into advanced TypeScript patterns for production apps.",
+    title: "Building a Bilingual Portfolio with Next.js",
+    description:
+      "How I built this portfolio with full English and Mongolian support using Next.js 16.",
     date: "Dec 5, 2024",
     readTime: "7 min read",
-    category: "TypeScript",
-    slug: "mastering-typescript-patterns",
-    tags: ["TypeScript", "JavaScript", "Patterns"],
+    category: "Next.js",
+    slug: "bilingual-portfolio-nextjs",
+    tags: ["Next.js", "i18n", "TypeScript"],
   },
   {
-    title: "A Guide to Responsive Design",
-    description: "Master responsive design techniques for modern web applications.",
+    title: "Basketball and Coding: Lessons from Sports",
+    description:
+      "How being a competitive basketball player taught me discipline, teamwork, and persistence.",
     date: "Nov 18, 2024",
     readTime: "6 min read",
-    category: "Design",
-    slug: "responsive-design-guide",
-    tags: ["CSS", "Design", "Responsive"],
+    category: "Life",
+    slug: "basketball-coding-lessons",
+    tags: ["Life", "Sports", "Mindset"],
   },
   {
-    title: "Getting Started with Next.js 15",
-    description: "Everything you need to know about the latest Next.js features.",
+    title: "Learning Chinese as a Developer",
+    description: "My journey to HSK 5 and why language skills matter in tech.",
     date: "Nov 10, 2024",
     readTime: "8 min read",
-    category: "React",
-    slug: "getting-started-nextjs-15",
-    tags: ["Next.js", "React", "Tutorial"],
+    category: "Language",
+    slug: "learning-chinese-developer",
+    tags: ["Chinese", "HSK", "Language"],
   },
   {
-    title: "State Management in 2025",
-    description: "Comparing modern state management solutions for React applications.",
+    title: "Vue.js vs Next.js: My Take",
+    description:
+      "Comparing my experience building with Vue.js vs Next.js across different projects.",
     date: "Oct 25, 2024",
     readTime: "6 min read",
-    category: "React",
-    slug: "state-management-2025",
-    tags: ["React", "State Management", "Zustand"],
+    category: "Web",
+    slug: "vuejs-vs-nextjs",
+    tags: ["Vue.js", "Next.js", "Comparison"],
   },
 ];
 
-const categories = ["All", "React", "TypeScript", "CSS", "Design"];
+const categories = ["All", "Flutter", "Next.js", "Life", "Web"];
 
 export default function BlogPage() {
   const t = useTranslations("BlogPage");

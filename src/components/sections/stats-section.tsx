@@ -2,16 +2,16 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Code2, Star, GitFork, Users } from "lucide-react";
+import { Code2, Languages, Briefcase, Medal } from "lucide-react";
 
 export function StatsSection() {
   const t = useTranslations("StatsSection");
 
   const stats = [
-    { icon: Code2, label: t("projects"), value: "50+" },
-    { icon: Star, label: t("githubStars"), value: "2.5K" },
-    { icon: GitFork, label: t("contributions"), value: "1.2K" },
-    { icon: Users, label: t("clients"), value: "30+" },
+    { icon: Code2, label: t("projects"), value: "10+" },
+    { icon: Languages, label: t("languages"), value: "3" },
+    { icon: Briefcase, label: t("experience"), value: "1+" },
+    { icon: Medal, label: t("medals"), value: "10+" },
   ];
 
   return (
