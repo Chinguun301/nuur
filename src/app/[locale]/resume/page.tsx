@@ -20,6 +20,8 @@ import {
   Shield,
   BookOpen,
   IdCard,
+  Monitor,
+  Building2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -55,6 +57,13 @@ const workExperience = [
     type: "Бүтэн цагийн",
   },
 ];
+
+const internship = {
+  company: "Shanghai Qike Information Technology Co., Ltd.",
+  period: "2023 - 2024",
+  description:
+    "Компанийн өдөр тутмын үйл ажиллагаатай танилцаж ажилласан. Баримт бичиг боловсруулах болон мэдээлэл нэгтгэх ажилд оролцсон. Багаар ажиллах болон мэргэжлийн ур чадвараа хөгжүүлсэн.",
+};
 
 const education = [
   {
@@ -346,6 +355,36 @@ export default function ResumePage() {
           </div>
         </section>
 
+        {/* ============ INTERNSHIP ============ */}
+        <section className="mb-16">
+          <SectionTitle>Дадлага</SectionTitle>
+          <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <Card className="p-6 lg:p-8">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                    <Building2 className="h-6 w-6 text-blue-500" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-semibold mb-1">{internship.company}</h3>
+                    <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-muted-foreground mb-3">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="h-3.5 w-3.5" />
+                        {internship.period}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{internship.description}</p>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
         {/* ============ EDUCATION ============ */}
         <section className="mb-16">
           <SectionTitle>Боловсрол</SectionTitle>
@@ -498,6 +537,30 @@ export default function ResumePage() {
                   <Card className="p-4 flex items-center justify-between">
                     <span className="text-sm font-medium">{lang.name}</span>
                     <Badge variant="secondary">{lang.level}</Badge>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Computer Skills */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Monitor className="h-4 w-4 text-green-500" />
+              Компьютерын програмын мэдлэг
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {skills.computer.map((skill, idx) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                >
+                  <Card className="p-4 text-center">
+                    <p className="text-sm font-medium mb-1">{skill.name}</p>
+                    <Badge variant="secondary">{skill.level}</Badge>
                   </Card>
                 </motion.div>
               ))}
