@@ -26,7 +26,12 @@
   "HeroSection": {
     "greeting": "Hello, I'm",
     "name": "John Doe",
-    "roles": ["Front-End Developer", "UI/UX Designer", "React Specialist", "Open Source Contributor"],
+    "roles": [
+      "Front-End Developer",
+      "UI/UX Designer",
+      "React Specialist",
+      "Open Source Contributor"
+    ],
     "description": "I build beautiful, performant, and accessible web applications with modern technologies. Let's create something amazing together.",
     "viewMyWork": "View My Work",
     "downloadCV": "Download CV"

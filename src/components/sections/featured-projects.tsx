@@ -57,9 +57,7 @@ export function FeaturedProjects() {
         >
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">{t("title")}</h2>
-            <p className="mt-4 text-muted-foreground text-lg max-w-2xl">
-              {t("description")}
-            </p>
+            <p className="mt-4 text-muted-foreground text-lg max-w-2xl">{t("description")}</p>
           </div>
           <Button variant="outline" className="rounded-full shrink-0" asChild>
             <Link href="/projects">

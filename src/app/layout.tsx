@@ -26,10 +26,7 @@ export default function RootLayout({ children }: Props) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        <link
-          rel="canonical"
-          href={process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}
-        />
+        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"} />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

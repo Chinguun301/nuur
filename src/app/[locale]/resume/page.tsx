@@ -174,9 +174,7 @@ export default function ResumePage() {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-2">
                 {personalInfo.name}
               </h1>
-              <p className="text-lg text-muted-foreground mb-4">
-                {personalInfo.title}
-              </p>
+              <p className="text-lg text-muted-foreground mb-4">{personalInfo.title}</p>
 
               {/* Quick info chips */}
               <div className="flex flex-wrap gap-3">
@@ -195,11 +193,7 @@ export default function ResumePage() {
               </div>
             </div>
 
-            <Button
-              size="lg"
-              className="rounded-full shrink-0"
-              onClick={() => window.print()}
-            >
+            <Button size="lg" className="rounded-full shrink-0" onClick={() => window.print()}>
               <Download className="mr-2 h-4 w-4" />
               CV Татах
             </Button>
@@ -220,9 +214,9 @@ export default function ResumePage() {
                 <User className="h-5 w-5 text-blue-500" />
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                Хариуцлагатай, зохион байгуулалт сайтай, харилцааны ур чадвартай.
-                Аливаа ажлыг цаг хугацаанд нь чанартай гүйцэтгэхийг эрхэмлэдэг
-                бөгөөд шинэ мэдлэг, туршлага хуримтлуулахыг эрмэлздэг.
+                Хариуцлагатай, зохион байгуулалт сайтай, харилцааны ур чадвартай. Аливаа ажлыг цаг
+                хугацаанд нь чанартай гүйцэтгэхийг эрхэмлэдэг бөгөөд шинэ мэдлэг, туршлага
+                хуримтлуулахыг эрмэлздэг.
               </p>
             </div>
           </Card>
@@ -319,9 +313,7 @@ export default function ResumePage() {
                           {work.duration}
                         </Badge>
                       </div>
-                      <p className="text-base text-primary font-medium mb-3">
-                        {work.company}
-                      </p>
+                      <p className="text-base text-primary font-medium mb-3">{work.company}</p>
                       <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-muted-foreground mb-3">
                         <span className="flex items-center gap-1.5">
                           <Calendar className="h-3.5 w-3.5" />
@@ -332,9 +324,7 @@ export default function ResumePage() {
                           {work.type}
                         </span>
                       </div>
-                      <p className="text-sm text-muted-foreground mb-2">
-                        {work.description}
-                      </p>
+                      <p className="text-sm text-muted-foreground mb-2">{work.description}</p>
                       <p className="text-sm font-medium text-foreground">
                         Цалингийн хүлээлт: {work.salary}
                       </p>
@@ -378,18 +368,10 @@ export default function ResumePage() {
                         </span>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {edu.degree && (
-                          <Badge variant="outline">{edu.degree}</Badge>
-                        )}
-                        {edu.major && (
-                          <Badge variant="outline">{edu.major}</Badge>
-                        )}
-                        {edu.gpa && (
-                          <Badge variant="secondary">Голч: {edu.gpa}</Badge>
-                        )}
-                        {edu.note && (
-                          <Badge variant="outline">{edu.note}</Badge>
-                        )}
+                        {edu.degree && <Badge variant="outline">{edu.degree}</Badge>}
+                        {edu.major && <Badge variant="outline">{edu.major}</Badge>}
+                        {edu.gpa && <Badge variant="secondary">Голч: {edu.gpa}</Badge>}
+                        {edu.note && <Badge variant="outline">{edu.note}</Badge>}
                       </div>
                     </div>
                   </div>

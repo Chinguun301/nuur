@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
+const locales = ["en", "mn"] as const;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -15,50 +17,68 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .select("slug, updated_at")
     .eq("published", true);
 
-  // Static routes
-  const staticRoutes = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 1 },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/projects`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-  ];
+  const staticRoutes: MetadataRoute.Sitemap = [];
 
-  // Dynamic project routes
-  const projectRoutes = (projects || []).map((project) => ({
-    url: `${baseUrl}/projects/${project.slug}`,
-    lastModified: new Date(project.updated_at),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  for (const locale of locales) {
+    staticRoutes.push(
+      {
+        url: `${baseUrl}/${locale}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 1,
+      },
+      {
+        url: `${baseUrl}/${locale}/about`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+      },
+      {
+        url: `${baseUrl}/${locale}/projects`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.9,
+      },
+      {
+        url: `${baseUrl}/${locale}/blog`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+      },
+      {
+        url: `${baseUrl}/${locale}/contact`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+      },
+    );
+  }
 
-  // Dynamic blog routes
-  const blogRoutes = (blogs || []).map((blog) => ({
-    url: `${baseUrl}/blog/${blog.slug}`,
-    lastModified: new Date(blog.updated_at),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  // Dynamic project routes (for each locale)
+  const projectRoutes: MetadataRoute.Sitemap = [];
+  for (const locale of locales) {
+    for (const project of projects || []) {
+      projectRoutes.push({
+        url: `${baseUrl}/${locale}/projects/${project.slug}`,
+        lastModified: new Date(project.updated_at),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      });
+    }
+  }
+
+  // Dynamic blog routes (for each locale)
+  const blogRoutes: MetadataRoute.Sitemap = [];
+  for (const locale of locales) {
+    for (const blog of blogs || []) {
+      blogRoutes.push({
+        url: `${baseUrl}/${locale}/blog/${blog.slug}`,
+        lastModified: new Date(blog.updated_at),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      });
+    }
+  }
 
   return [...staticRoutes, ...projectRoutes, ...blogRoutes];
 }

@@ -99,9 +99,7 @@ export default function ProjectsPage() {
           className="mb-12"
         >
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">{t("title")}</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            {t("description")}
-          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl">{t("description")}</p>
         </motion.div>
 
         {/* Filters */}

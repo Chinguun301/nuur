@@ -58,9 +58,7 @@ export default function ContactPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">{t("title")}</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t("description")}
-          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("description")}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">

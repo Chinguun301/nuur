@@ -19,7 +19,7 @@ export function LanguageSwitcher() {
       router.replace(
         // @ts-expect-error — pathname type is the union of all possible paths
         { pathname, params },
-        { locale: nextLocale }
+        { locale: nextLocale },
       );
     });
   };

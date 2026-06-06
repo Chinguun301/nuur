@@ -79,7 +79,12 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <LanguageSwitcher />
           <ThemeSwitcher />
-          <Button variant="default" size="sm" className="hidden md:inline-flex rounded-full" asChild>
+          <Button
+            variant="default"
+            size="sm"
+            className="hidden md:inline-flex rounded-full"
+            asChild
+          >
             <Link href="/contact">{t("letsTalk")}</Link>
           </Button>
 
