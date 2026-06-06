@@ -1,0 +1,121 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "resume": "Resume",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "letsTalk": "Let's Talk",
+    "portfolio": "Portfolio"
+  },
+  "Footer": {
+    "portfolio": "Portfolio",
+    "description": "A passionate Front-End Developer crafting beautiful, performant, and accessible web experiences.",
+    "pages": "Pages",
+    "connect": "Connect",
+    "home": "Home",
+    "about": "About",
+    "resume": "Resume",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "crafted": "Crafted with passion and precision."
+  },
+  "HeroSection": {
+    "greeting": "Hello, I'm",
+    "name": "John Doe",
+    "roles": ["Front-End Developer", "UI/UX Designer", "React Specialist", "Open Source Contributor"],
+    "description": "I build beautiful, performant, and accessible web applications with modern technologies. Let's create something amazing together.",
+    "viewMyWork": "View My Work",
+    "downloadCV": "Download CV"
+  },
+  "SkillsSection": {
+    "title": "Skills & Expertise",
+    "description": "Technologies and tools I work with to bring ideas to life."
+  },
+  "FeaturedProjects": {
+    "title": "Featured Projects",
+    "description": "A selection of projects that showcase my skills and experience.",
+    "viewAll": "View All Projects",
+    "viewCaseStudy": "View Case Study"
+  },
+  "ExperienceHighlights": {
+    "title": "Experience",
+    "description": "My professional journey so far."
+  },
+  "StatsSection": {
+    "projects": "Projects",
+    "githubStars": "GitHub Stars",
+    "contributions": "Contributions",
+    "clients": "Clients"
+  },
+  "TestimonialsSection": {
+    "title": "What People Say",
+    "description": "Feedback from clients and colleagues."
+  },
+  "BlogPreview": {
+    "title": "Latest Blog Posts",
+    "description": "Thoughts, tutorials, and insights on web development.",
+    "viewAll": "View All Posts"
+  },
+  "ContactCTA": {
+    "title": "Let's Work Together",
+    "description": "Have a project in mind? Let's discuss how I can help bring your ideas to life.",
+    "getInTouch": "Get in Touch",
+    "viewPortfolio": "View Portfolio"
+  },
+  "ProjectsPage": {
+    "title": "Projects",
+    "description": "A collection of projects I've worked on, ranging from full-stack applications to design systems.",
+    "searchPlaceholder": "Search projects...",
+    "noResults": "No projects found matching your criteria.",
+    "viewCaseStudy": "View Case Study"
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "description": "Thoughts, tutorials, and insights on web development, design, and technology.",
+    "searchPlaceholder": "Search articles...",
+    "noResults": "No articles found matching your criteria."
+  },
+  "ResumePage": {
+    "title": "Resume"
+  },
+  "AboutPage": {
+    "title": "About",
+    "titleAccent": "Me",
+    "description": "I'm a passionate Front-End Developer with 5+ years of experience building modern web applications. I specialize in React, Next.js, and creating delightful user experiences.",
+    "description2": "My journey in tech started during college when I built my first website. Since then, I've been obsessed with crafting beautiful, performant, and accessible web applications that make a real impact.",
+    "location": "San Francisco, CA",
+    "experience": "5+ Years Experience",
+    "downloadResume": "Download Resume",
+    "journeyTitle": "My Journey",
+    "journeyDescription": "The path that shaped my career."
+  },
+  "ContactPage": {
+    "title": "Get in Touch",
+    "description": "Have a question, project idea, or just want to say hi? I'd love to hear from you.",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "subjectLabel": "Subject",
+    "messageLabel": "Message",
+    "sendButton": "Send Message",
+    "sendingButton": "Sending...",
+    "successMessage": "Message sent successfully! I'll get back to you soon.",
+    "errorMessage": "Failed to send message. Please try again.",
+    "emailPlaceholder": "your@email.com",
+    "subjectPlaceholder": "What's this about?",
+    "messagePlaceholder": "Tell me about your project...",
+    "orReachOut": "Or reach out directly"
+  },
+  "LanguageSwitcher": {
+    "en": "English",
+    "mn": "Монгол"
+  },
+  "Common": {
+    "siteTitle": "Front-End Developer Portfolio",
+    "siteDescription": "A passionate Front-End Developer crafting beautiful, performant, and accessible web experiences.",
+    "siteName": "Portfolio"
+  }
+}
