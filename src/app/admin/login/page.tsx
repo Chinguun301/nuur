@@ -34,41 +34,16 @@ export default function AdminLoginPage() {
 
       if (data.user) {
         // Check if admin using service_role key (bypasses RLS)
-        const { role, error: roleError } = await checkAdminRole(data.user.id);
+        const { role } = await checkAdminRole(data.user.id);
 
         if (role === "admin") {
           router.push("/admin/dashboard");
         } else {
           await supabase.auth.signOut();
-          if (roleError) {
-            setError(
-              "Админ эрх шалгахад алдаа гарлаа.\n" +
-                "Алдаа: " +
-                roleError +
-                "\n\n" +
-                "ШИЙДЭЛ:\n" +
-                "1. Supabase Dashboard → SQL Editor-оор SQL ажиллуул:\n" +
-                "   CREATE OR REPLACE FUNCTION public.is_admin()\n" +
-                "   RETURNS BOOLEAN AS \$\$\n" +
-                "     SELECT EXISTS (\n" +
-                "       SELECT 1 FROM public.users WHERE id = auth.uid() AND role = 'admin'\n" +
-                "     );\n" +
-                "   \$\$ LANGUAGE sql SECURITY DEFINER STABLE;\n" +
-                "\n" +
-                '   DROP POLICY IF EXISTS "Admin all users" ON users;\n' +
-                '   CREATE POLICY "Admin all users" ON users\n' +
-                "   FOR ALL USING (public.is_admin());\n" +
-                "\n" +
-                "2. Дээрх SQL-ийг БҮХ бусад хүснэгтийн админ policy-д мөн адил хийх\n" +
-                "   (projects, blogs, skills, гэх мэт).",
-            );
-          } else {
-            setError(
-              "Танд admin эрх байхгүй байна.\n" +
-                "public.users хүснэгтэд таны role-г шалгана уу:\n" +
-                "  SELECT * FROM users WHERE email = 'admin@nuur.dev';",
-            );
-          }
+          setError(
+            "Access denied. You do not have admin privileges.\n" +
+            "Please contact the system administrator if you believe this is an error.",
+          );
         }
       }
     } catch (err) {

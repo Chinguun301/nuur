@@ -1,18 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Save,
-  Edit,
-  Trash2,
-  GitBranch,
-  MessageCircle,
-  BriefcaseBusiness,
-  Globe,
-} from "lucide-react";
+import { Edit, Trash2, GitBranch, MessageCircle, BriefcaseBusiness, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
 const platforms = [

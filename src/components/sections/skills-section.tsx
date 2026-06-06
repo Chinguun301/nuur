@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Code2, Palette, Database, Server, type LucideIcon } from "lucide-react";
+import { Code2, Palette, Database, Server } from "lucide-react";
 
 const skillCategories = [
   {

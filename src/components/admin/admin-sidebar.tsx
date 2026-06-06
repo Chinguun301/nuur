@@ -13,7 +13,6 @@ import {
   Star,
   MessageSquare,
   Share2,
-  Search,
   Settings,
   FileDown,
   BarChart3,

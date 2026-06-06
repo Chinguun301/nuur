@@ -46,23 +46,12 @@ export async function GET() {
   try {
     const supabase = await createAdminClient();
 
-    const [totalViews, uniqueVisitors, pageViews, countryStats] = await Promise.all([
+    const [totalViews, uniqueVisitors] = await Promise.all([
       supabase.from("analytics").select("*", { count: "exact", head: true }),
       supabase
         .from("analytics")
         .select("session_id", { count: "exact", head: true })
         .not("session_id", "is", null),
-      supabase
-        .from("analytics")
-        .select("page, count")
-        .order("created_at", { ascending: false })
-        .limit(10),
-      supabase
-        .from("analytics")
-        .select("country, count")
-        .not("country", "is", null)
-        .order("created_at", { ascending: false })
-        .limit(10),
     ]);
 
     // Aggregate counts per page
@@ -73,11 +62,27 @@ export async function GET() {
       pageCounts[row.page] = (pageCounts[row.page] || 0) + 1;
     });
 
+    // Aggregate counts per country
+    const { data: countryData } = await supabase
+      .from("analytics")
+      .select("country")
+      .not("country", "is", null);
+
+    const countryCounts: Record<string, number> = {};
+    countryData?.forEach((row) => {
+      if (row.country) {
+        countryCounts[row.country] = (countryCounts[row.country] || 0) + 1;
+      }
+    });
+
     return NextResponse.json({
       totalViews: totalViews.count,
       uniqueVisitors: uniqueVisitors.count,
       pageViews: Object.entries(pageCounts)
         .map(([page, count]) => ({ page, count }))
+        .sort((a, b) => b.count - a.count),
+      countries: Object.entries(countryCounts)
+        .map(([country, count]) => ({ country, count }))
         .sort((a, b) => b.count - a.count),
     });
   } catch (error) {
