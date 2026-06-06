@@ -10,12 +10,14 @@ export async function proxy(request: NextRequest) {
 
   // ═══ Admin Routes — skip i18n, handle auth ═══
   if (pathname.startsWith("/admin")) {
+    // Allow login page without auth
     if (pathname === "/admin/login") {
       return NextResponse.next();
     }
 
     let supabaseResponse = NextResponse.next({ request });
 
+    // Create Supabase client with ANON key for session handling
     const supabase = createServerClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -35,6 +37,7 @@ export async function proxy(request: NextRequest) {
       },
     );
 
+    // 1️⃣ Check if user is authenticated
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -46,16 +49,41 @@ export async function proxy(request: NextRequest) {
       return NextResponse.redirect(url);
     }
 
-    // Check if user is admin
-    const { data: dbUser } = await supabase.from("users").select("role").eq("id", user.id).single();
+    // 2️⃣ Check if user is admin — use SERVICE_ROLE key to bypass RLS
+    const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 
-    if (!dbUser || dbUser.role !== "admin") {
-      const url = request.nextUrl.clone();
-      url.pathname = "/";
-      return NextResponse.redirect(url);
+    try {
+      const res = await fetch(`${supabaseUrl}/rest/v1/users?select=role&id=eq.${user.id}&limit=1`, {
+        headers: {
+          apikey: serviceRoleKey,
+          Authorization: `Bearer ${serviceRoleKey}`,
+          "Content-Type": "application/json",
+        },
+        cache: "no-store",
+      });
+
+      if (res.ok) {
+        const dbUsers = await res.json();
+        const dbUser = dbUsers?.[0];
+
+        if (!dbUser || dbUser.role !== "admin") {
+          const url = request.nextUrl.clone();
+          url.pathname = "/";
+          return NextResponse.redirect(url);
+        }
+
+        // ✅ User is admin — allow access
+        return supabaseResponse;
+      }
+    } catch {
+      // Fetch failed — fall through to redirect
     }
 
-    return supabaseResponse;
+    // Fallback: admin role check failed
+    const url = request.nextUrl.clone();
+    url.pathname = "/";
+    return NextResponse.redirect(url);
   }
 
   // ═══ Public Routes — run next-intl i18n middleware ═══
